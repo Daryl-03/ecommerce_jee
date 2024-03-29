@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="HermesStore">
+    <output-path>$PROJECT_DIR$/out/artifacts/HermesStore</output-path>
+    <root id="root" />
+  </artifact>
+</component>

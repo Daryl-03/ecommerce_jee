@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&display=swap');
+
+* {
+  font-family: 'Kaisei Tokumin', serif;
+}
+
+body{
+    min-height: 100vh;
+    height: 200px;
+}
+
+.icon-large {
+    font-size: 2em;
+}
+/* 
+.card {
+  margin-bottom: 30px;
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.40s;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 16px;
+}
+
+.btn-primary {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .card-img-top {
+    height: 200px;
+  }
+} */
+
+.card-img-top{
+  height: 20rem;
+  transition: all .45s;
+}
+
+.card-img-top:hover{
+  transform: scale(0.9);
+}
+
+.product-card {
+  transition: all .45s;
+}
+
+.product-card img {
+  max-width: 100%;
+  /* height: auto; */
+  transition: all .45s;
+}

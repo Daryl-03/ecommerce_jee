@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&display=swap');
+
+* {
+  font-family: 'Kaisei Tokumin', serif;
+}
+
+.custom-card-login {
+    width: 100%;
+}
+
+.icon-large {
+    font-size: 2em;
+}
+  
