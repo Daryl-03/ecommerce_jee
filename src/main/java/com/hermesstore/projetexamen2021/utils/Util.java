@@ -1,4 +1,4 @@
-package com.hermes.store.projetexamen2023.utils;
+package com.hermesstore.projetexamen2021.utils;
 
 /**
  * utility class for the project

@@ -1,16 +1,179 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Naku
-  Date: 20/03/2023
-  Time: 21:13
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
-</html>
+<select id="nationalite" name="nationalite" class="col-sm-3 col-md-8 form-control"
+                               placeholder="Nationalité" required >
+    <option value="afghan">Afghan</option>
+    <option value="albanais">Albanais</option>
+    <option value="algérien">Alg&eacute;rien</option>
+    <option value="allemand">Allemand</option>
+    <option value="américain">Am&eacute;ricain</option>
+    <option value="angolais">Angolais</option>
+    <option value="argentin">Argentin</option>
+    <option value="arménien">Arm&eacute;nien</option>
+    <option value="arubais">Arubais</option>
+    <option value="australien">Australien</option>
+    <option value="autrichien">Autrichien</option>
+    <option value="azerbaïdjanais">Azerbaïdjanais</option>
+    <option value="bahaméen">Baham&eacute;en</option>
+    <option value="bangladais">Bangladais</option>
+    <option value="belge">Belge</option>
+    <option value="béninois">B&eacute;ninois</option>
+    <option value="biélorusse">Bi&eacute;lorusse</option>
+    <option value="birman">Birman</option>
+    <option value="bolivien">Bolivien</option>
+    <option value="bosniaque">Bosniaque</option>
+    <option value="botswanais">Botswanais</option>
+    <option value="bouthanais">Bouthanais</option>
+    <option value="brésilien">Br&eacute;silien</option>
+    <option value="britannique">Britannique</option>
+    <option value="bulgare">Bulgare</option>
+    <option value="burkinabé">Burkinab&eacute;</option>
+    <option value="burundais">Burundais</option>
+    <option value="caïmanien">Caïmanien</option>
+    <option value="cambodgien">Cambodgien</option>
+    <option value="camerounais">Camerounais</option>
+    <option value="canadien">Canadien</option>
+    <option value="chilien">Chilien</option>
+    <option value="chinois">Chinois</option>
+    <option value="chypriote">Chypriote</option>
+    <option value="colombien">Colombien</option>
+    <option value="congolais">Congolais</option>
+    <option value="costaricain">Costaricain</option>
+    <option value="croate">Croate</option>
+    <option value="cubain">Cubain</option>
+    <option value="danois">Danois</option>
+    <option value="dominicain">Dominicain</option>
+    <option value="égyptien">Égyptien</option>
+    <option value="émirati">Émirati</option>
+    <option value="équatorien">Équatorien</option>
+    <option value="espagnol">Espagnol</option>
+    <option value="estonien">Estonien</option>
+    <option value="éthiopien">Éthiopien</option>
+    <option value="fijien">Fijien</option>
+    <option value="finlandais">Finlandais</option>
+    <option value="français">Français</option>
+    <option value="gabonais">Gabonais</option>
+    <option value="gambien">Gambien</option>
+    <option value="géorgien">G&eacute;orgien</option>
+    <option value="ghanéen">Ghan&eacute;en</option>
+    <option value="grec">Grec</option>
+    <option value="grenadien">Grenadien</option>
+    <option value="guatémaltèque">Guat&eacute;maltèque</option>
+    <option value="guinéen">Guin&eacute;en</option>
+    <option value="guinéen-bissauvien">Guin&eacute;en-bissauvien</option>
+    <option value="guyanais">Guyanais</option>
+    <option value="haïtien">Haïtien</option>
+    <option value="hondurien">Hondurien</option>
+    <option value="hongrois">Hongrois</option>
+    <option value="indien">Indien</option>
+    <option value="indonésien">Indon&eacute;sien</option>
+    <option value="irakien">Irakien</option>
+    <option value="iranien">Iranien</option>
+    <option value="irlandais">Irlandais</option>
+    <option value="islandais">Islandais</option>
+    <option value="israélien">Isra&eacute;lien</option>
+    <option value="italien">Italien</option>
+    <option value="ivoirien">Ivoirien</option>
+    <option value="jamaïcain">Jamaïcain</option>
+    <option value="japonais">Japonais</option>
+    <option value="jordanien">Jordanien</option>
+    <option value="kazakh">Kazakh</option>
+    <option value="kenyan">K&eacute;nyan</option>
+    <option value="kirghize">Kirghize</option>
+    <option value="kiribatien">Kiribatien</option>
+    <option value="kittitien-et-nevicien">Kittitien-et-nevicien</option>
+    <option value="kosovar">Kosovar</option>
+    <option value="koweïtien">Koweïtien</option>
+    <option value="laotien">Laotien</option>
+    <option value="lesothan">Lesothan</option>
+    <option value="letton">Letton</option>
+    <option value="libanais">Libanais</option>
+    <option value="libérien">Lib&eacute;rien</option>
+    <option value="libyen">Libyen</option>
+    <option value="liechtensteinois">Liechtensteinois</option>
+    <option value="lituanien">Lituanien</option>
+    <option value="luxembourgeois">Luxembourgeois</option>
+    <option value="macédonien">Mac&eacute;donien</option>
+    <option value="malawien">Malawien</option>
+    <option value="malaisien">Malaisien</option>
+    <option value="maldivien">Maldivien</option>
+    <option value="malien">Malien</option>
+    <option value="maltais">Maltais</option>
+    <option value="marocain">Marocain</option>
+    <option value="marshallais">Marshallais</option>
+    <option value="mauricien">Mauricien</option>
+    <option value="mauritanien">Mauritanien(ne)</option>
+    <option value="mauricien">Mauricien(ne)</option>
+    <option value="mexicain">Mexicain(e)</option>
+    <option value="micronésien">Micron&eacute;sien(ne)</option>
+    <option value="moldave">Moldave</option>
+    <option value="monégasque">Mon&eacute;gasque</option>
+    <option value="mongol">Mongol(e)</option>
+    <option value="monténégrin">Mont&eacute;n&eacute;grin(e)</option>
+    <option value="marocain">Marocain(e)</option>
+    <option value="mozambicain">Mozambicain(e)</option>
+    <option value="namibien">Namibien(ne)</option>
+    <option value="nauruan">Nauruan(e)</option>
+    <option value="népalais">N&eacute;palais(e)</option>
+    <option value="néo-z&eacute;landais">N&eacute;o-z&eacute;landais(e)</option>
+    <option value="nicaraguayen">Nicaraguayen(ne)</option>
+    <option value="nigérien">Nig&eacute;rien(ne)</option>
+    <option value="nigérian">Nig&eacute;rian(e)</option>
+    <option value="nord-cor&eacute;en">Nord-cor&eacute;en(ne)</option>
+    <option value="norvégien">Norv&eacute;gien(ne)</option>
+    <option value="omanais">Omanais(e)</option>
+    <option value="ougandais">Ougandais(e)</option>
+    <option value="ouzbek">Ouzbek(ke)</option>
+    <option value="pakistanaise">Pakistanaise</option>
+    <option value="palauan">Paluan(e)</option>
+    <option value="panaméen">Panam&eacute;en(ne)</option>
+    <option value="papou-n&eacute;o-guin&eacute;en">Papou-n&eacute;o-guin&eacute;en(ne)</option>
+    <option value="paraguayen">Paraguayen(ne)</option>
+    <option value="péruvien">P&eacute;ruvien(ne)</option>
+    <option value="philippin">Philippin(e)</option>
+    <option value="polonais">Polonais(e)</option>
+    <option value="portugais">Portugais(e)</option>
+    <option value="qatarien">Qatarien(ne)</option>
+    <option value="roumain">Roumain(e)</option>
+    <option value="russe">Russe</option>
+    <option value="rwandais">Rwandais(e)</option>
+    <option value="saint-lucien">Saint-lucien(ne)</option>
+    <option value="salomonais">Salomonais(e)</option>
+    <option value="salvadorien">Salvadorien(ne)</option>
+    <option value="samoan">Samoan(e)</option>
+    <option value="saoudien">Saoudien(ne)</option>
+    <option value="sénégalais">S&eacute;n&eacute;galais(e)</option>
+    <option value="seychellois">Seychellois(e)</option>
+    <option value="sierraléonais">Sierra L&eacute;onais(e)</option>
+    <option value="singapourien">Singapourien(ne)</option>
+    <option value="slovaque">Slovaque</option>
+    <option value="slovène">Slovène</option>
+    <option value="somalien">Somalien(ne)</option>
+    <option value="soudanais">Soudanais(e)</option>
+    <option value="sri-lankais">Sri-Lankais(e)</option>
+    <option value="suédois">Su&eacute;dois(e)</option>
+    <option value="suisse">Suisse</option>
+    <option value="surinamien">Surinamien(ne)</option>
+    <option value="swazilandais">Swazilandais(e)</option>
+    <option value="syrien">Syrien(ne)</option>
+    <option value="tadjik">Tadjik</option>
+    <option value="taïwanais">Taïwanais(e)</option>
+    <option value="tanzanien">Tanzanien(ne)</option>
+    <option value="tchadien">Tchadien(ne)</option>
+    <option value="tchèque">Tchèque</option>
+    <option value="thaïlandais">Thaïlandais(e)</option>
+    <option value="togolais">Togolais(e)</option>
+    <option value="tonguien">Tonguien(ne)</option>
+    <option value="trinidadien">Trinidadien(ne)</option>
+    <option value="tunisien">Tunisien(ne)</option>
+    <option value="turkmène">Turkmène</option>
+    <option value="turc">Turc(que)</option>
+    <option value="tuvaluan">Tuvaluan(ne)</option>
+    <option value="ukrainien">Ukrainien(ne)</option>
+    <option value="uruguayen">Uruguayen(ne)</option>
+    <option value="vanuatuan">Vanuatuan(ne)</option>
+    <option value="vénézuélien">V&eacute;n&eacute;zu&eacute;lien(ne)</option>
+    <option value="vietnamien">Vietnamien(ne)</option>
+    <option value="yéménite">Y&eacute;m&eacute;nite</option>
+    <option value="zambien">Zambien(ne)</option>
+    <option value="zimbabwéen">Zimbabw&eacute;en(ne)</option>
+</select>
+

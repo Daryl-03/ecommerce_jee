@@ -1,8 +1,8 @@
 package com.hermesstore.projetexamen2021.model.datasource;
 
-import com.hermes.store.projetexamen2023.exceptions.DAOException;
-import com.hermes.store.projetexamen2023.jdbc.DBManager;
-import com.hermes.store.projetexamen2023.model.Utilisateur;
+import com.hermesstore.projetexamen2021.exceptions.DAOException;
+import com.hermesstore.projetexamen2021.jdbc.DBManager;
+import com.hermesstore.projetexamen2021.model.Utilisateur;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -71,10 +71,41 @@ public class UtilisateurDAO implements DAO<Utilisateur>{
         }
     }
     
+    public void updateClient(Utilisateur obj) throws DAOException {
+        try (Connection connection = DBManager.getConnection()){
+            String sql = "UPDATE utilisateur SET login = ?, password = ? WHERE id = (SELECT utilisateur.id FROM utilisateur JOIN client ON client.id_user = utilisateur.id WHERE client.id = ?)";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, obj.getLogin());
+            statement.setString(2, obj.getPassword());
+            statement.setInt(3, obj.getId());
+            statement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new DAOException("Error : Unable to update user !");
+        }
+    }
+    
+    public void updateFournisseur(Utilisateur obj) throws DAOException {
+        try (Connection connection = DBManager.getConnection()){
+            String sql = "UPDATE utilisateur SET login = ?, password = ? WHERE id = (SELECT utilisateur.id FROM utilisateur JOIN fournisseur ON fournisseur.id_user = utilisateur.id WHERE fournisseur.id = ?)";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, obj.getLogin());
+            statement.setString(2, obj.getPassword());
+            statement.setInt(3, obj.getId());
+            statement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new DAOException("Error : Unable to update user !");
+        }
+    }
+    
     @Override
-    public void delete(Utilisateur obj) throws DAOException {
+    public void delete(int id) throws DAOException {
         try (Connection connection = DBManager.getConnection()){
             String sql = "DELETE FROM utilisateur WHERE id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1, id);
+            statement.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
             throw new DAOException("Error : Unable to delete user !");
@@ -123,5 +154,30 @@ public class UtilisateurDAO implements DAO<Utilisateur>{
             throw new DAOException("Error : Unable to check if login exists !");
         }
         return false;
+    }
+    
+    public Utilisateur readByLoginAndPassword(String login, String password) throws DAOException {
+        try (Connection connection = DBManager.getConnection()){
+            String sql = "SELECT * FROM utilisateur WHERE login = ? AND password = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, login);
+            statement.setString(2, password);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                String profil = resultSet.getString("profil");
+                switch (profil){
+                    case "Fournisseur":
+                        return new FournisseurDAO().readByLoginAndPassword(login, password);
+                    case "Client":
+                        return new ClientDAO().readByLoginAndPassword(login, password);
+                    default:
+                        return null;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new DAOException("Error : Unable to read user by login and password !");
+        }
+        return null;
     }
 }

@@ -1,4 +1,4 @@
-package com.hermes.store.projetexamen2023.model;
+package com.hermesstore.projetexamen2021.model;
 
 public class Utilisateur {
     protected int id;

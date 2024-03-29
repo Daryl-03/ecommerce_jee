@@ -1,6 +1,6 @@
-package com.hermes.store.projetexamen2023.jdbc;
+package com.hermesstore.projetexamen2021.jdbc;
 
-import com.hermes.store.projetexamen2023.exceptions.DBHandlingException;
+import com.hermesstore.projetexamen2021.exceptions.DBHandlingException;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,7 +15,7 @@ public class DBManager {
     public static Connection getConnection() throws DBHandlingException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/bdProjetExamen2023?zeroDateTimeBehavior=convertToNull", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/bdprojetexamen2023?zeroDateTimeBehavior=convertToNull", "root", "");
             return connection;
         } catch (ClassNotFoundException e) {
             throw new DBHandlingException("Driver Class not found : '" + e.getMessage() + "' ");

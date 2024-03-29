@@ -1,6 +1,6 @@
-package com.hermes.store.projetexamen2023.model.datasource;
+package com.hermesstore.projetexamen2021.model.datasource;
 
-import com.hermes.store.projetexamen2023.exceptions.DAOException;
+import com.hermesstore.projetexamen2021.exceptions.DAOException;
 
 import java.util.List;
 
@@ -8,6 +8,6 @@ public interface DAO<T> {
     public int create(T obj) throws DAOException;
     public T read(int id) throws DAOException;
     public void update(T obj) throws DAOException;
-    public void delete(T obj) throws DAOException;
+    public void delete(int id) throws DAOException;
     public List<T> readAll() throws DAOException;
 }

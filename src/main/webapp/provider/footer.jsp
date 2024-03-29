@@ -1,16 +1,14 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Naku
-  Date: 20/03/2023
-  Time: 18:02
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
-</html>
+<footer class="bg-light text-center row">
+    <div class="container mb-0">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Copyright &copy; 2023</p>
+            </div>
+            <div class="col-md-6 text-right">
+                <a href="#">Terms of Service</a>
+                <span class="mx-2">|</span>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>

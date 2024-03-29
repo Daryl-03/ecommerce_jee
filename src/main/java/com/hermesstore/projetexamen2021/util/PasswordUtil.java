@@ -1,4 +1,4 @@
-package com.schooltrack.utils;
+package com.hermesstore.projetexamen2021.util;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;

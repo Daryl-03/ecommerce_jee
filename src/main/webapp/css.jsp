@@ -1,5 +1,5 @@
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="/include/css/bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/include/css/bootstrap.min.css">
 <!-- Other library -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <style>

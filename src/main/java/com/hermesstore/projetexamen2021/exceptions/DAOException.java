@@ -1,4 +1,4 @@
-package com.hermes.store.projetexamen2023.exceptions;
+package com.hermesstore.projetexamen2021.exceptions;
 
 public class DAOException extends Exception{
     public DAOException(String message) {

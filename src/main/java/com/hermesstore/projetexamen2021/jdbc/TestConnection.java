@@ -1,4 +1,4 @@
-package com.hermes.store.projetexamen2023.jdbc;
+package com.hermesstore.projetexamen2021.jdbc;
 
 import java.sql.Connection;
 
