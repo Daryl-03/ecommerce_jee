@@ -15,7 +15,7 @@ public class DBManager {
     public static Connection getConnection() throws DBHandlingException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/bdprojetexamen2023?zeroDateTimeBehavior=convertToNull", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/bdprojetexamen2023?zeroDateTimeBehavior=convertToNull", "root", "Kurama_009");
             return connection;
         } catch (ClassNotFoundException e) {
             throw new DBHandlingException("Driver Class not found : '" + e.getMessage() + "' ");
